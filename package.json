@@ -1,6 +1,6 @@
 {
   "name": "lts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate the Node.js LTS schedule",
   "author": "Continuation Labs <contact@continuation.io> (http://continuation.io/)",
   "main": "lib/index.js",
