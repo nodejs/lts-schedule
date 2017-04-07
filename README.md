@@ -23,3 +23,4 @@ node bin/lts.js -s 2017-04-01 -e 2019-04-01 -h output.html -g output.svg -p outp
 
 - `-g`, `--svg` - The location to write the SVG output file. Optional.
 - `-p`, `--png` - The location to write the PNG output file. Uses `svg2png` under the hood. Optional.
+- `-a`, `--animate` - Animate the bars of the graph on load.

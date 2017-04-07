@@ -56,6 +56,14 @@ const cliArgs = {
     require: false,
     multiple: false,
     default: null
+  },
+  'a': {
+    description: 'Animate bars on load',
+    alias: 'animate',
+    type: 'boolean',
+    require: false,
+    multiple: false,
+    default: false
   }
 };
 
@@ -72,7 +80,8 @@ const options = {
   queryEnd: new Date(args.end),
   html: args.html ? Path.resolve(args.html) : null,
   svg: args.svg ? Path.resolve(args.svg) : null,
-  png: args.png ? Path.resolve(args.png) : null
+  png: args.png ? Path.resolve(args.png) : null,
+  animate: args.animate
 };
 
 Lib.create(options);
