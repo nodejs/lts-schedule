@@ -72,6 +72,14 @@ const cliArgs = {
     require: false,
     multiple: false,
     default: false
+  },
+  'n': {
+    description: 'Project Name',
+    alias: 'projectName',
+    type: 'string',
+    require: false,
+    multiple: false,
+    default: 'Node.js'
   }
 };
 
@@ -90,7 +98,8 @@ const options = {
   svg: args.svg ? Path.resolve(args.svg) : null,
   png: args.png ? Path.resolve(args.png) : null,
   animate: args.animate,
-  excludeMaster: args.excludeMaster
+  excludeMaster: args.excludeMaster,
+  projectName: args.projectName
 };
 
 Lib.create(options);
