@@ -64,6 +64,22 @@ const cliArgs = {
     require: false,
     multiple: false,
     default: false
+  },
+  'm': {
+    description: 'Exclude Master (unstable) in graph',
+    alias: 'excludeMaster',
+    type: 'boolean',
+    require: false,
+    multiple: false,
+    default: false
+  },
+  'n': {
+    description: 'Project Name',
+    alias: 'projectName',
+    type: 'string',
+    require: false,
+    multiple: false,
+    default: 'Node.js'
   }
 };
 
@@ -81,7 +97,9 @@ const options = {
   html: args.html ? Path.resolve(args.html) : null,
   svg: args.svg ? Path.resolve(args.svg) : null,
   png: args.png ? Path.resolve(args.png) : null,
-  animate: args.animate
+  animate: args.animate,
+  excludeMaster: args.excludeMaster,
+  projectName: args.projectName
 };
 
 Lib.create(options);
