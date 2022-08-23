@@ -66,8 +66,8 @@ const cliArgs = {
     default: false
   },
   'm': {
-    description: 'Exclude Master (unstable) in graph',
-    alias: 'excludeMaster',
+    description: 'Exclude Main (unstable) in graph',
+    alias: 'excludeMain',
     type: 'boolean',
     require: false,
     multiple: false,
@@ -98,7 +98,7 @@ const options = {
   svg: args.svg ? Path.resolve(args.svg) : null,
   png: args.png ? Path.resolve(args.png) : null,
   animate: args.animate,
-  excludeMaster: args.excludeMaster,
+  excludeMain: args.excludeMain,
   projectName: args.projectName
 };
 
