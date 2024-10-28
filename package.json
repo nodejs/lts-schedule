@@ -1,6 +1,6 @@
 {
   "name": "lts",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Generate the Node.js LTS schedule",
   "main": "lib/index.js",
   "homepage": "https://github.com/nodejs/lts-schedule",
