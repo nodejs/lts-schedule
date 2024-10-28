@@ -16,7 +16,7 @@
     "test": "belly-button -f"
   },
   "bin": {
-    "lts": "./bin/lts.js"
+    "lts": "bin/lts.js"
   },
   "engines": {
     "node": ">=4.0.0"
