@@ -92,7 +92,7 @@ if (args instanceof Error) {
 }
 
 const options = {
-  data: require(args.data),
+  data: await import(args.data),
   queryStart: new Date(args.start),
   queryEnd: new Date(args.end),
   html: args.html ? resolve(args.html) : null,
