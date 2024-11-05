@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 'use strict';
-const Path = require('path');
-const Bossy = require('bossy');
-const Lib = require('../lib');
+import { resolve } from 'node:path';
+import Bossy from 'bossy';
+import { create } from '../lib/index.js';
+
 const now = new Date();
 const oneYearFromNow = new Date();
 
@@ -15,7 +16,7 @@ const cliArgs = {
     type: 'string',
     require: false,
     multiple: false,
-    default: Path.resolve(__dirname, '..', 'lts.json')
+    default: resolve(__dirname, '..', 'lts.json')
   },
   's': {
     description: 'Query start date',
@@ -91,15 +92,15 @@ if (args instanceof Error) {
 }
 
 const options = {
-  data: require(args.data),
+  data: await import(args.data),
   queryStart: new Date(args.start),
   queryEnd: new Date(args.end),
-  html: args.html ? Path.resolve(args.html) : null,
-  svg: args.svg ? Path.resolve(args.svg) : null,
-  png: args.png ? Path.resolve(args.png) : null,
+  html: args.html ? resolve(args.html) : null,
+  svg: args.svg ? resolve(args.svg) : null,
+  png: args.png ? resolve(args.png) : null,
   animate: args.animate,
   excludeMain: args.excludeMain,
   projectName: args.projectName
 };
 
-Lib.create(options);
+create(options);
