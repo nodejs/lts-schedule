@@ -80,6 +80,14 @@ const cliArgs = {
     require: false,
     multiple: false,
     default: 'Node.js'
+  },
+  'c': {
+    description: 'Current date marker',
+    alias: 'currentDateMarker',
+    type: 'boolean',
+    require: false,
+    multiple: false,
+    default: false
   }
 };
 
@@ -90,6 +98,8 @@ if (args instanceof Error) {
   process.exit(1);
 }
 
+console.log(args);
+
 const options = {
   data: require(args.data),
   queryStart: new Date(args.start),
@@ -99,7 +109,8 @@ const options = {
   png: args.png ? Path.resolve(args.png) : null,
   animate: args.animate,
   excludeMain: args.excludeMain,
-  projectName: args.projectName
+  projectName: args.projectName,
+  currentDateMarker: args.currentDateMarker
 };
 
 Lib.create(options);
