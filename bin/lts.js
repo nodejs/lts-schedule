@@ -98,8 +98,6 @@ if (args instanceof Error) {
   process.exit(1);
 }
 
-console.log(args);
-
 const options = {
   data: require(args.data),
   queryStart: new Date(args.start),
