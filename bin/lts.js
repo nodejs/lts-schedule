@@ -84,10 +84,10 @@ const cliArgs = {
   'c': {
     description: 'Current date marker',
     alias: 'currentDateMarker',
-    type: 'boolean',
+    type: 'string',
     require: false,
     multiple: false,
-    default: false
+    default: null
   }
 };
 
