@@ -80,6 +80,14 @@ const cliArgs = {
     require: false,
     multiple: false,
     default: 'Node.js'
+  },
+  'c': {
+    description: 'Current date marker',
+    alias: 'currentDateMarker',
+    type: 'string',
+    require: false,
+    multiple: false,
+    default: null
   }
 };
 
@@ -99,7 +107,8 @@ const options = {
   png: args.png ? Path.resolve(args.png) : null,
   animate: args.animate,
   excludeMain: args.excludeMain,
-  projectName: args.projectName
+  projectName: args.projectName,
+  currentDateMarker: args.currentDateMarker
 };
 
 Lib.create(options);
