@@ -4,9 +4,9 @@ const Path = require('path');
 const Bossy = require('bossy');
 const Lib = require('../lib');
 const now = new Date();
-const oneYearFromNow = new Date();
+const oneYearFromNow = new Date('2035-01-01');
 
-oneYearFromNow.setFullYear(now.getFullYear() + 1);
+// oneYearFromNow.setFullYear(now.getFullYear() + 1);
 
 const cliArgs = {
   'd': {
@@ -112,3 +112,10 @@ const options = {
 };
 
 Lib.create(options);
+
+Lib.create({
+  ...options,
+  queryStart: new Date('2029-09-01'),
+  queryEnd: new Date('2031-05-01'),
+  svg: options.svg.replace('.svg', '2030.svg'),
+});
