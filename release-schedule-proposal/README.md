@@ -77,3 +77,15 @@ Here are the release schedule proposals:
   ![Release schedule proposal preview](./less-frequent-lts.svg)
 
   ![Release schedule proposal preview](./less-frequent-lts2030.svg)
+
+## No Active LTS anymore
+
+  1. current duration: 12 months
+  2. active duration: 0 months
+  3. maintenance duration: 24 months
+
+  Total life span (from start of beta until end of maintenance): 36 months
+
+  ![Release schedule proposal preview](./no-active-lts.svg)
+
+  ![Release schedule proposal preview](./no-active-lts2030.svg)
