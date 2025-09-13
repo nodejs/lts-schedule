@@ -7,3 +7,21 @@ node ./bin/lts.js -g release-schedule-proposal/<some-uniq-name>.svg >> release-s
 ```
 
 Here are the release schedule proposals:
+
+## Status quo
+
+  1. current duration: 6 months
+  2. active duration:
+     - for even-numbered releases: 12 months
+     - for odd-numbered releases: 0 months
+  3. maintenance duration:
+     - for even-numbered releases: 24 months
+     - for odd-numbered releases: 3 months
+
+  Total life span (from start of beta until end of maintenance):
+  - for even-numbered releases: 42 months
+  - for odd-numbered releases: 9 months
+
+  ![Release schedule proposal preview](./status-quo.svg)
+
+  ![Release schedule proposal preview](./status-quo2030.svg)
