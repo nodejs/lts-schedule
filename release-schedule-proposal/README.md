@@ -25,3 +25,17 @@ Here are the release schedule proposals:
   ![Release schedule proposal preview](./status-quo.svg)
 
   ![Release schedule proposal preview](./status-quo2030.svg)
+
+## LTS every year
+
+  1. alpha duration: 5 months
+  2. beta duration: 1 months
+  3. current duration: 6 months
+  4. active duration: 12 months
+  5. maintenance duration: 18 months
+
+  Total life span (from start of beta until end of maintenance): 37 months
+
+  ![Release schedule proposal preview](./lts-every-year.svg)
+
+  ![Release schedule proposal preview](./lts-every-year2030.svg)
