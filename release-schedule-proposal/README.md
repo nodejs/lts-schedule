@@ -59,3 +59,21 @@ Here are the release schedule proposals:
   ![Release schedule proposal preview](./longer-life-cycle.svg)
 
   ![Release schedule proposal preview](./longer-life-cycle2030.svg)
+
+## Less frequent LTS
+
+  1. current duration: 6 months
+  2. active duration:
+     - for modulo-4-numbered releases: 24 months
+     - for other releases: 0 months
+  3. maintenance duration:
+     - for modulo-4-numbered releases: 18 months
+     - for other releases: 2 months
+
+  Total life span (from start of beta until end of maintenance):
+  - for module-4-numbered releases: 48 months
+  - for releases: 8 months
+
+  ![Release schedule proposal preview](./less-frequent-lts.svg)
+
+  ![Release schedule proposal preview](./less-frequent-lts2030.svg)
