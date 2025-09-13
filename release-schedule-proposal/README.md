@@ -39,3 +39,23 @@ Here are the release schedule proposals:
   ![Release schedule proposal preview](./lts-every-year.svg)
 
   ![Release schedule proposal preview](./lts-every-year2030.svg)
+
+## Longer life cycle
+
+  1. current duration:
+     - for even-numbered releases: 6 months
+     - for odd-numbered releases: 12 months
+  2. active duration:
+     - for even-numbered releases: 18 months
+     - for odd-numbered releases: 0 months
+  3. maintenance duration:
+     - for even-numbered releases: 24 months
+     - for odd-numbered releases: 2 months
+
+  Total life span (from start of beta until end of maintenance):
+  - for even-numbered releases: 48 months
+  - for odd-numbered releases: 14 months
+
+  ![Release schedule proposal preview](./longer-life-cycle.svg)
+
+  ![Release schedule proposal preview](./longer-life-cycle2030.svg)
