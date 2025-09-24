@@ -147,3 +147,21 @@ queued security releases are ready.
   ![Release schedule proposal preview](./no-active-lts.svg)
 
   ![Release schedule proposal preview](./no-active-lts2030.svg)
+
+## Rolling semver-major
+
+  1. current duration: 6 weeks
+  3. active duration:
+     - 0 weeks
+     - or 12 months for the October release
+  2. maintenance duration:
+     - 8 weeks
+     - or 18 months for the October release
+
+  Total life span (from start of beta until end of maintenance):
+  - 14 weeks
+  - or 31 months for the October release
+
+  ![Release schedule proposal preview](./rolling.svg)
+
+  ![Release schedule proposal preview](./rolling2030.svg)

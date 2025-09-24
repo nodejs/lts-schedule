@@ -103,7 +103,7 @@ const options = {
   queryStart: new Date(args.start),
   queryEnd: new Date(args.end),
   html: args.html ? Path.resolve(args.html) : null,
-  svg: args.svg ? Path.resolve(args.svg) : Path.join(__dirname, '..', 'release-schedule-proposal', 'no-active-lts.svg'),
+  svg: args.svg ? Path.resolve(args.svg) : Path.join(__dirname, '..', 'release-schedule-proposal', 'rolling.svg'),
   png: args.png ? Path.resolve(args.png) : null,
   animate: args.animate,
   excludeMain: args.excludeMain,
