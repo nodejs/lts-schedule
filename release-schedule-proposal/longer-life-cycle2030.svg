@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500"><defs><style type="text/css"><![CDATA[ 
+.beta {
+  fill:rgb(240, 240, 75);
+}
+.current {
+  fill: #5fa04e;
+}
+.active {
+  fill: #229ad6;
+}
+.maintenance {
+  fill: #b1bcc2;
+}
+.unstable,.alpha {
+  fill: #e99c40;
+}
+.bar-join {
+  fill: #ffffff;
+}
+.bar-join.unstable, .bar-join.current {
+  display: none;
+}
+.tick text {
+  font: 16px sans-serif;
+  fill: #89a19d;
+}
+.axis--y .tick text {
+  text-anchor: end;
+}
+.label,.label-beta {
+  fill: #fff;
+  font: 20px sans-serif;
+  font-weight: 100;
+  text-anchor: start;
+  dominant-baseline: middle;
+  text-transform: uppercase;
+}
+.label-beta{
+  fill: #000;
+} ]]></style></defs><g id="bar-container" transform="translate(110, 30)"><g class="axis axis--x" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle"><g class="tick" opacity="1" transform="translate(40.414607358594175,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5"></line><text fill="#000" y="0" x="0.5" dy="-10">Oct29</text></g><g class="tick" opacity="1" transform="translate(164.75425590334982,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5" stroke-dasharray="2,2"></line><text fill="#000" y="0" x="0.5" dy="-10">Jan30</text></g><g class="tick" opacity="1" transform="translate(286.279516749039,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5"></line><text fill="#000" y="0" x="0.5" dy="-10">Apr30</text></g><g class="tick" opacity="1" transform="translate(409.2119714442614,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5" stroke-dasharray="2,2"></line><text fill="#000" y="0" x="0.5" dy="-10">Jul30</text></g><g class="tick" opacity="1" transform="translate(533.4953322350357,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5"></line><text fill="#000" y="0" x="0.5" dy="-10">Oct30</text></g><g class="tick" opacity="1" transform="translate(657.8349807797913,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5" stroke-dasharray="2,2"></line><text fill="#000" y="0" x="0.5" dy="-10">Jan31</text></g><g class="tick" opacity="1" transform="translate(779.3602416254805,0)"><line stroke="#89a19d" y2="440" x1="0.5" x2="0.5"></line><text fill="#000" y="0" x="0.5" dy="-10">Apr31</text></g></g><g class="axis axis--y" fill="none" font-size="10" font-family="sans-serif" text-anchor="start"><g class="tick" opacity="1" transform="translate(0,45.39682539682538)"><line stroke="#e1e7e7" x2="820" y1="0.5" y2="0.5"></line><text fill="#000" x="0" y="0.5" dy="0.32em" dx="-10">Main</text></g><g class="tick" opacity="1" transform="translate(0,115.23809523809523)"><line stroke="#e1e7e7" x2="820" y1="0.5" y2="0.5"></line><text fill="#000" x="0" y="0.5" dy="0.32em" dx="-10">Node.js 28</text></g><g class="tick" opacity="1" transform="translate(0,185.0793650793651)"><line stroke="#e1e7e7" x2="820" y1="0.5" y2="0.5"></line><text fill="#000" x="0" y="0.5" dy="0.32em" dx="-10">Node.js 30</text></g><g class="tick" opacity="1" transform="translate(0,254.92063492063494)"><line stroke="#e1e7e7" x2="820" y1="0.5" y2="0.5"></line><text fill="#000" x="0" y="0.5" dy="0.32em" dx="-10">Node.js 31</text></g><g class="tick" opacity="1" transform="translate(0,324.7619047619048)"><line stroke="#e1e7e7" x2="820" y1="0.5" y2="0.5"></line><text fill="#000" x="0" y="0.5" dy="0.32em" dx="-10">Node.js 32</text></g><g class="tick" opacity="1" transform="translate(0,394.6031746031747)"><line stroke="#e1e7e7" x2="820" y1="0.5" y2="0.5"></line><text fill="#000" x="0" y="0.5" dy="0.32em" dx="-10">Node.js 33</text></g><line y1="440" y2="440" x2="820" stroke="#89a19d"></line></g><g><rect class="bar unstable" x="0" y="20.952380952380935" width="820" height="48.88888888888889"></rect><rect class="bar-join unstable" x="-1" y="20.952380952380935" width="2" height="48.88888888888889" style="opacity: 0;"></rect><text class="label" x="15" y="47.39682539682538" style="opacity: 1;">unstable</text></g><g><rect class="bar maintenance" x="66.19439868204283" y="90.79365079365078" width="753.8056013179572" height="48.88888888888889"></rect><rect class="bar-join maintenance" x="65.19439868204283" y="90.79365079365078" width="2" height="48.88888888888889" style="opacity: 1;"></rect><text class="label" x="81.19439868204283" y="117.23809523809523" style="opacity: 1;">maintenance</text></g><g><rect class="bar active" x="0" y="90.79365079365078" width="66.19439868204283" height="48.88888888888889"></rect><rect class="bar-join active" x="-1" y="90.79365079365078" width="2" height="48.88888888888889" style="opacity: 0;"></rect><text class="label" x="15" y="117.23809523809523" style="opacity: 0;">active</text></g><g><rect class="bar maintenance" x="805.1400329489292" y="160.63492063492063" width="14.85996705107084" height="48.88888888888889"></rect><rect class="bar-join maintenance" x="804.1400329489292" y="160.63492063492063" width="2" height="48.88888888888889" style="opacity: 1;"></rect><text class="label" x="820.1400329489292" y="187.0793650793651" style="opacity: 0;">maintenance</text></g><g><rect class="bar active" x="66.19439868204283" y="160.63492063492063" width="738.9456342668864" height="48.88888888888889"></rect><rect class="bar-join active" x="65.19439868204283" y="160.63492063492063" width="2" height="48.88888888888889" style="opacity: 1;"></rect><text class="label" x="81.19439868204283" y="187.0793650793651" style="opacity: 1;">active</text></g><g><rect class="bar current" x="0" y="160.63492063492063" width="66.19439868204283" height="48.88888888888889"></rect><rect class="bar-join current" x="-1" y="160.63492063492063" width="2" height="48.88888888888889" style="opacity: 0;"></rect><text class="label" x="15" y="187.0793650793651" style="opacity: 0;">current</text></g><g><rect class="bar maintenance" x="559.2751235584843" y="230.47619047619048" width="82.4052718286656" height="48.88888888888889"></rect><rect class="bar-join maintenance" x="558.2751235584843" y="230.47619047619048" width="2" height="48.88888888888889" style="opacity: 1;"></rect><text class="label" x="574.2751235584843" y="256.92063492063494" style="opacity: 0;">maintenance</text></g><g><rect class="bar current" x="66.19439868204283" y="230.47619047619048" width="493.0807248764415" height="48.88888888888889"></rect><rect class="bar-join current" x="65.19439868204283" y="230.47619047619048" width="2" height="48.88888888888889" style="opacity: 0;"></rect><text class="label" x="81.19439868204283" y="256.92063492063494" style="opacity: 1;">current</text></g><g><rect class="bar active" x="805.1400329489292" y="300.31746031746036" width="14.85996705107084" height="48.88888888888889"></rect><rect class="bar-join active" x="804.1400329489292" y="300.31746031746036" width="2" height="48.88888888888889" style="opacity: 1;"></rect><text class="label" x="820.1400329489292" y="326.7619047619048" style="opacity: 0;">active</text></g><g><rect class="bar current" x="559.2751235584843" y="300.31746031746036" width="245.86490939044484" height="48.88888888888889"></rect><rect class="bar-join current" x="558.2751235584843" y="300.31746031746036" width="2" height="48.88888888888889" style="opacity: 0;"></rect><text class="label" x="574.2751235584843" y="326.7619047619048" style="opacity: 1;">current</text></g><g><rect class="bar current" x="805.1400329489292" y="370.15873015873024" width="14.85996705107084" height="48.88888888888889"></rect><rect class="bar-join current" x="804.1400329489292" y="370.15873015873024" width="2" height="48.88888888888889" style="opacity: 0;"></rect><text class="label" x="820.1400329489292" y="396.6031746031747" style="opacity: 0;">current</text></g></g></svg>
