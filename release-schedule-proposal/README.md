@@ -7,6 +7,27 @@ the SVG name in `bin/lts.js`, and use the following command:
 node ./bin/lts.js >> release-schedule-proposal/README.md
 ```
 
+## Enterprise Feedback
+
+* Current releases are generally ignored (including the even-numbered releases).
+* Prefer to keep (i.e. do not shorten) 30 month LTS support window (from start of Active LTS through to End-of-Life).
+* Several teams asked if the LTS support window could be extended (5 years was quoted for other software (e.g. OpenSSL) LTS).
+* Want predictable cadence for forward planning.
+* Want LTS support window overlap to aid migration from one LTS release line to another.
+
+## Dependency lifecycles
+
+| Dependency | LTS policy | Notes |
+|-|-|-|
+| c-ares | Unknown | - |
+| ICU4C | Unknown | Releases historically appear to be April and October. We have generally updated within release lines as ICU does not consider changes to localized output to be breaking, but we have had issues raised against Node.js when output changes |
+| libuv | None | Has historically accommodated Node.js due to overlap of collaborators/maintainers |
+| npm   | None | https://github.com/npm/cli/wiki/Integrating-with-node |
+| OpenSSL | [Policy](https://openssl-library.org/policies/releasestrat/index.html). New LTS every 2 years. Each LTS supported minimum of 5 years. | "In essence that means an LTS will be released every April in odd-numbered years." so may just miss new LTS versions for Node.js semver-majors if we keep to April releases |
+| Undici | Unknown | Overlap of collaborators/maintainers with Node.js |
+| V8 | None. Does not follow semver. | V8 updates are generally considered semver-major as the V8 ABI is part of Node.js' |
+| zlib | Unknown | Node.js is using Chromium's fork of zlib |
+
 Here are the release schedule proposals:
 
 ## Status quo
@@ -16,11 +37,11 @@ Here are the release schedule proposals:
      - for even-numbered releases: 12 months
      - for odd-numbered releases: 0 months
   3. maintenance duration:
-     - for even-numbered releases: 24 months
+     - for even-numbered releases: 18 months
      - for odd-numbered releases: 3 months
 
   Total life span (from start of beta until end of maintenance):
-  - for even-numbered releases: 42 months
+  - for even-numbered releases: 36 months
   - for odd-numbered releases: 9 months
 
   ![Release schedule proposal preview](./status-quo.svg)
