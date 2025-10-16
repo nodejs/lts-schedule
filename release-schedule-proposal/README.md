@@ -32,21 +32,30 @@ Here are the release schedule proposals:
 
 ## Status quo
 
-  1. current duration: 6 months
-  2. active duration:
-     - for even-numbered releases: 12 months
-     - for odd-numbered releases: 0 months
-  3. maintenance duration:
-     - for even-numbered releases: 18 months
-     - for odd-numbered releases: 3 months
+  1. Current duration: 6 months
+  2. Active duration:
+     - For even-numbered releases: 12 months
+     - For odd-numbered releases: 0 months
+  3. Maintenance duration:
+     - For even-numbered releases: 18 months
+     - For odd-numbered releases: 3 months
 
-  Total life span (from start of beta until end of maintenance):
-  - for even-numbered releases: 36 months
-  - for odd-numbered releases: 9 months
+Total life span (from start of beta until end of maintenance):
 
-  ![Release schedule proposal preview](./status-quo.svg)
+- For even-numbered releases: 36 months
+- For odd-numbered releases: 9 months
 
-  ![Release schedule proposal preview](./status-quo2030.svg)
+![Release schedule proposal preview](./status-quo.svg)
+
+![Release schedule proposal preview](./status-quo2030.svg)
+
+### Maintainers Feedback
+
+* Current release cadence (2 majors/year) is seen as burdensome — too many active branches and backports.
+* Reducing to one major per year would **lower the number of active release lines**, easing backporting release management.
+* **Security releases** would be simpler to coordinate, with fewer simultaneous branches to patch and less overlap between LTS lines.
+* Shorter maintenance windows would **limit the volume of non-security backports**, allowing focus on critical fixes only.
+* Concerns remain about ecosystem adaptation, but the **reduction in workload is broadly seen as a clear benefit**.
 
 ## LTS every year
 
