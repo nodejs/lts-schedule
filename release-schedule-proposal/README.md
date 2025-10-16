@@ -32,13 +32,13 @@ Here are the release schedule proposals:
 
 ## Status quo
 
-  1. Current duration: 6 months
-  2. Active duration:
-     - For even-numbered releases: 12 months
-     - For odd-numbered releases: 0 months
-  3. Maintenance duration:
-     - For even-numbered releases: 18 months
-     - For odd-numbered releases: 3 months
+1. Current duration: 6 months
+2. Active duration:
+ - For even-numbered releases: 12 months
+ - For odd-numbered releases: 0 months
+3. Maintenance duration:
+ - For even-numbered releases: 18 months
+ - For odd-numbered releases: 3 months
 
 Total life span (from start of beta until end of maintenance):
 
@@ -57,19 +57,19 @@ Total life span (from start of beta until end of maintenance):
 * Shorter maintenance windows would **limit the volume of non-security backports**, allowing focus on critical fixes only.
 * Concerns remain about ecosystem adaptation, but the **reduction in workload is broadly seen as a clear benefit**.
 
-## LTS every year
+## Proposal 1: LTS every year
 
-  1. Alpha duration: 5 months
-  2. Beta duration: 1 months
-  3. Current duration: 6 months
-  4. Active duration: 12 months
-  5. Maintenance duration: 18 months
+1. Alpha duration: 5 months
+2. Beta duration: 1 months
+3. Current duration: 6 months
+4. Active duration: 12 months
+5. Maintenance duration: 18 months
 
-  Total life span (from start of beta until end of maintenance): 37 months
+Total life span (from start of beta until end of maintenance): 37 months
 
-  ![Release schedule proposal preview](./lts-every-year.svg)
+![Release schedule proposal preview](./lts-every-year.svg)
 
-  ![Release schedule proposal preview](./lts-every-year2030.svg)
+![Release schedule proposal preview](./lts-every-year2030.svg)
 
 ### Alpha and Beta definition
 
@@ -128,70 +128,70 @@ regular release (potentially ahead of schedule). The difference on a maintenance
 perspective is that a security release requires locking the CI until all the
 queued security releases are ready.
 
-## Longer life cycle
+## Proposal 2: Longer life cycle
 
-  1. current duration:
-     - for even-numbered releases: 6 months
-     - for odd-numbered releases: 12 months
-  2. active duration:
-     - for even-numbered releases: 18 months
-     - for odd-numbered releases: 0 months
-  3. maintenance duration:
-     - for even-numbered releases: 24 months
-     - for odd-numbered releases: 2 months
+1. current duration:
+ - for even-numbered releases: 6 months
+ - for odd-numbered releases: 12 months
+2. active duration:
+ - for even-numbered releases: 18 months
+ - for odd-numbered releases: 0 months
+3. maintenance duration:
+ - for even-numbered releases: 24 months
+ - for odd-numbered releases: 2 months
 
-  Total life span (from start of beta until end of maintenance):
-  - for even-numbered releases: 48 months
-  - for odd-numbered releases: 14 months
+Total life span (from start of beta until end of maintenance):
+- for even-numbered releases: 48 months
+- for odd-numbered releases: 14 months
 
-  ![Release schedule proposal preview](./longer-life-cycle.svg)
+![Release schedule proposal preview](./longer-life-cycle.svg)
 
-  ![Release schedule proposal preview](./longer-life-cycle2030.svg)
+![Release schedule proposal preview](./longer-life-cycle2030.svg)
 
-## Less frequent LTS
+## Proposal 3: Less frequent LTS
 
-  1. current duration: 6 months
-  2. active duration:
-     - for modulo-4-numbered releases: 24 months
-     - for other releases: 0 months
-  3. maintenance duration:
-     - for modulo-4-numbered releases: 18 months
-     - for other releases: 2 months
+1. current duration: 6 months
+2. active duration:
+ - for modulo-4-numbered releases: 24 months
+ - for other releases: 0 months
+3. maintenance duration:
+ - for modulo-4-numbered releases: 18 months
+ - for other releases: 2 months
 
-  Total life span (from start of beta until end of maintenance):
-  - for module-4-numbered releases: 48 months
-  - for releases: 8 months
+Total life span (from start of beta until end of maintenance):
+- for module-4-numbered releases: 48 months
+- for releases: 8 months
 
-  ![Release schedule proposal preview](./less-frequent-lts.svg)
+![Release schedule proposal preview](./less-frequent-lts.svg)
 
-  ![Release schedule proposal preview](./less-frequent-lts2030.svg)
+![Release schedule proposal preview](./less-frequent-lts2030.svg)
 
-## No Active LTS anymore
+## Proposal 4: No Active LTS anymore
 
-  1. current duration: 12 months
-  2. active duration: 0 months
-  3. maintenance duration: 24 months
+1. current duration: 12 months
+2. active duration: 0 months
+3. maintenance duration: 24 months
 
-  Total life span (from start of beta until end of maintenance): 36 months
+Total life span (from start of beta until end of maintenance): 36 months
 
-  ![Release schedule proposal preview](./no-active-lts.svg)
+![Release schedule proposal preview](./no-active-lts.svg)
 
-  ![Release schedule proposal preview](./no-active-lts2030.svg)
+![Release schedule proposal preview](./no-active-lts2030.svg)
 
-## Rolling semver-major
+## Proposal 5: Rolling semver-major
 
-  1. current duration: 6 weeks
-  3. active duration:
-     - 0 weeks
-     - or 12 months for the October release
-  2. maintenance duration:
-     - 8 weeks
-     - or 18 months for the October release
+1. current duration: 6 weeks
+2. active duration:
+ - 0 weeks
+ - or 12 months for the October release
+3. maintenance duration:
+ - 8 weeks
+ - or 18 months for the October release
 
-  Total life span (from start of beta until end of maintenance):
-  - 14 weeks
-  - or 31 months for the October release
+Total life span (from start of beta until end of maintenance):
+- 14 weeks
+- or 31 months for the October release
 
-  ![Release schedule proposal preview](./rolling.svg)
+![Release schedule proposal preview](./rolling.svg)
 
-  ![Release schedule proposal preview](./rolling2030.svg)
+![Release schedule proposal preview](./rolling2030.svg)
