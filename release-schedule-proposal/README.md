@@ -58,7 +58,7 @@ Total life span (from start of beta until end of maintenance):
 * **Security releases** would be simpler to coordinate, with fewer simultaneous branches to patch and less overlap between LTS lines.
 * Shorter maintenance windows would **limit the volume of non-security backports**, allowing focus on critical fixes only.
 * Concerns remain about ecosystem adaptation, but the **reduction in workload is broadly seen as a clear benefit**.
-* Using current to field test changes for regressions not caught by tests before landing on LTS.
+* Using current releases to field test changes for regressions not caught by tests before landing on LTS.
 
 ## Proposal 1: LTS every year
 
