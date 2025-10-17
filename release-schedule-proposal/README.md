@@ -17,6 +17,8 @@ node ./bin/lts.js >> release-schedule-proposal/README.md
 
 ## Dependency lifecycles
 
+(Non-exhaustive list)
+
 | Dependency | LTS policy | Notes |
 |-|-|-|
 | c-ares | Unknown | - |
