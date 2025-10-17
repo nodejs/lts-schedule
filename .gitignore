@@ -42,3 +42,4 @@ jspm_packages
 *.html
 *.png
 *.svg
+!release-schedule-proposal/*.svg
