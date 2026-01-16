@@ -3,6 +3,9 @@
 const Path = require('path');
 const Bossy = require('bossy');
 const Lib = require('../lib');
+const { writeFileSync } = require('node:fs');
+const Svg2png = require('svg2png');
+
 const now = new Date();
 const oneYearFromNow = new Date();
 
@@ -111,17 +114,13 @@ const options = {
 const d3n = Lib.create(options);
 
 if (args.html) {
-  const Fs = require('fs');
-  Fs.writeFileSync(Path.resolve(args.html), d3n.html());
+  writeFileSync(Path.resolve(args.html), d3n.html());
 }
 
 if (args.svg) {
-  const Fs = require('fs');
-  Fs.writeFileSync(Path.resolve(args.svg), d3n.svgString());
+  writeFileSync(Path.resolve(args.svg), d3n.svgString());
 }
 
 if (args.png) {
-  const Fs = require('fs');
-  const Svg2png = require('svg2png');
-  Fs.writeFileSync(Path.resolve(args.png), Svg2png.sync(Buffer.from(d3n.svgString())));
+  writeFileSync(Path.resolve(args.png), Svg2png.sync(Buffer.from(d3n.svgString())));
 }
