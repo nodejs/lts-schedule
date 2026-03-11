@@ -16,7 +16,7 @@ const cliArgs = {
     type: 'string',
     require: false,
     multiple: false,
-    default: resolve(__dirname, '..', 'lts.json')
+    default: new URL('../lts.json', import.meta.url).href
   },
   's': {
     description: 'Query start date',
@@ -100,7 +100,7 @@ if (args instanceof Error) {
 }
 
 const options = {
-  data: await import(args.data),
+  data: await import(args.data, { with: { type: 'json' } }),
   queryStart: new Date(args.start),
   queryEnd: new Date(args.end),
   html: args.html ? resolve(args.html) : null,
