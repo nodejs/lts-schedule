@@ -19,10 +19,9 @@
     "lts": "bin/lts.js"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=22.22.0"
   },
   "dependencies": {
-    "bossy": "3.0.4",
     "d3": "4.7.4",
     "d3-node": "1.0.1",
     "svg2png": "4.1.1"
