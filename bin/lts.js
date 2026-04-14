@@ -10,7 +10,7 @@ const cliArgs = {
   help: {
     description: 'Print usage',
     short: 'h',
-    type: 'boolean',
+    type: 'boolean'
   },
   data: {
     description: 'Input LTS JSON file',
@@ -28,22 +28,22 @@ const cliArgs = {
     description: 'Query end date',
     short: 'e',
     type: 'string',
-    default: `${now.getUTCFullYear() + 1}-${nowString.slice(5)}`,
+    default: `${now.getUTCFullYear() + 1}-${nowString.slice(5)}`
   },
   html: {
     description: 'HTML output file',
     short: 'h',
-    type: 'string',
+    type: 'string'
   },
   svg: {
     description: 'SVG output file',
     short: 'g',
-    type: 'string',
+    type: 'string'
   },
   png: {
     description: 'PNG output file',
     short: 'p',
-    type: 'string',
+    type: 'string'
   },
   animate: {
     description: 'Animate bars on load',
@@ -66,7 +66,7 @@ const cliArgs = {
   currentDateMarker: {
     description: 'Current date marker',
     short: 'c',
-    type: 'string',
+    type: 'string'
   }
 };
 
@@ -82,7 +82,7 @@ try {
   throw error;
 }
 
-function printUsage() {
+function printUsage () {
   console.log('Usage: lts [options]');
   console.log('');
   console.log('Options:');
