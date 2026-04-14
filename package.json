@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "Generate the Node.js LTS schedule",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "homepage": "https://github.com/nodejs/lts-schedule",
   "repository": {
     "type": "git",

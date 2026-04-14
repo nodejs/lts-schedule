@@ -3,6 +3,9 @@
 const Path = require('path');
 const { parseArgs } = require('util');
 const Lib = require('../lib');
+const { writeFileSync } = require('node:fs');
+const Svg2png = require('svg2png');
+
 const now = new Date();
 const nowString = now.toISOString().slice(0, 10);
 
@@ -104,13 +107,22 @@ const options = {
   data: require(Path.resolve(args.data)),
   queryStart: new Date(args.start),
   queryEnd: new Date(args.end),
-  html: args.html ? Path.resolve(args.html) : null,
-  svg: args.svg ? Path.resolve(args.svg) : null,
-  png: args.png ? Path.resolve(args.png) : null,
   animate: args.animate,
   excludeMain: args.excludeMain,
   projectName: args.projectName,
   currentDateMarker: args.currentDateMarker
 };
 
-Lib.create(options);
+const d3n = Lib.create(options);
+
+if (args.html) {
+  writeFileSync(Path.resolve(args.html), d3n.html());
+}
+
+if (args.svg) {
+  writeFileSync(Path.resolve(args.svg), d3n.svgString());
+}
+
+if (args.png) {
+  writeFileSync(Path.resolve(args.png), Svg2png.sync(Buffer.from(d3n.svgString())));
+}
