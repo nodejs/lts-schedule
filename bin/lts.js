@@ -1,108 +1,110 @@
 #!/usr/bin/env node
 'use strict';
 const Path = require('path');
-const Bossy = require('bossy');
+const { parseArgs } = require('util');
 const Lib = require('../lib');
 const { writeFileSync } = require('node:fs');
 const Svg2png = require('svg2png');
 
 const now = new Date();
-const oneYearFromNow = new Date();
-
-oneYearFromNow.setFullYear(now.getFullYear() + 1);
+const nowString = now.toISOString().slice(0, 10);
 
 const cliArgs = {
-  'd': {
+  help: {
+    description: 'Print usage',
+    short: 'h',
+    type: 'boolean'
+  },
+  data: {
     description: 'Input LTS JSON file',
-    alias: 'data',
+    short: 'd',
     type: 'string',
-    require: false,
-    multiple: false,
     default: Path.resolve(__dirname, '..', 'lts.json')
   },
-  's': {
+  start: {
     description: 'Query start date',
-    alias: 'start',
+    short: 's',
     type: 'string',
-    require: false,
-    multiple: false,
-    default: now
+    default: nowString
   },
-  'e': {
+  end: {
     description: 'Query end date',
-    alias: 'end',
+    short: 'e',
     type: 'string',
-    require: false,
-    multiple: false,
-    default: oneYearFromNow
+    default: `${now.getUTCFullYear() + 1}-${nowString.slice(5)}`
   },
-  'h': {
+  html: {
     description: 'HTML output file',
-    alias: 'html',
-    type: 'string',
-    require: false,
-    multiple: false,
-    default: null
+    short: 'h',
+    type: 'string'
   },
-  'g': {
+  svg: {
     description: 'SVG output file',
-    alias: 'svg',
-    type: 'string',
-    require: false,
-    multiple: false,
-    default: null
+    short: 'g',
+    type: 'string'
   },
-  'p': {
+  png: {
     description: 'PNG output file',
-    alias: 'png',
-    type: 'string',
-    require: false,
-    multiple: false,
-    default: null
+    short: 'p',
+    type: 'string'
   },
-  'a': {
+  animate: {
     description: 'Animate bars on load',
-    alias: 'animate',
+    short: 'a',
     type: 'boolean',
-    require: false,
-    multiple: false,
     default: false
   },
-  'm': {
+  excludeMain: {
     description: 'Exclude Main (unstable) in graph',
-    alias: 'excludeMain',
+    short: 'm',
     type: 'boolean',
-    require: false,
-    multiple: false,
     default: false
   },
-  'n': {
+  projectName: {
     description: 'Project Name',
-    alias: 'projectName',
+    short: 'n',
     type: 'string',
-    require: false,
-    multiple: false,
     default: 'Node.js'
   },
-  'c': {
+  currentDateMarker: {
     description: 'Current date marker',
-    alias: 'currentDateMarker',
-    type: 'string',
-    require: false,
-    multiple: false,
-    default: null
+    short: 'c',
+    type: 'string'
   }
 };
 
-const args = Bossy.parse(cliArgs, { argv: process.argv });
-
-if (args instanceof Error) {
-  Bossy.usage(cliArgs, args.message);
-  process.exit(1);
+let args;
+try {
+  args = parseArgs({
+    args: process.argv.slice(2),
+    options: cliArgs,
+    strict: true
+  }).values;
+} catch (error) {
+  printUsage();
+  throw error;
 }
 
+function printUsage () {
+  console.log('Usage: lts [options]');
+  console.log('');
+  console.log('Options:');
+  for (const [key, value] of Object.entries(cliArgs)) {
+    const short = value.short ? `-${value.short}, ` : '';
+    const defaultVal = value.default ? `[=${value.default}]` : '';
+    console.log(`  ${short}--${key}${defaultVal}  ${value.description}`);
+  }
+  console.log('');
+}
+
+if (args.help) {
+  printUsage();
+  return;
+}
+
+// Merge defaults with provided arguments
 const options = {
-  data: require(args.data),
+  data: require(Path.resolve(args.data)),
   queryStart: new Date(args.start),
   queryEnd: new Date(args.end),
   animate: args.animate,
