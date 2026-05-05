@@ -1,0 +1,30 @@
+name: Conventional Commit Linter
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  commitlint:
+    # cannot use ubuntu-slim here because wagoid/commitlint-github-action requires Docker
+    runs-on: ubuntu-latest
+    steps:
+      - name: Compute number of commits to fetch
+        id: nb-of-commits
+        # `+ 1` for PRs because of the merge commit
+        run: |
+          echo "toParse=$(echo "$EVENT" | jq -r 'if .commits then (.commits | length) else (.pull_request.commits + 1) end')" >> $GITHUB_OUTPUT
+        env:
+          EVENT: ${{ toJSON(github.event) }}
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        with:
+          persist-credentials: false
+          sparse-checkout: .
+          fetch-depth: ${{ steps.nb-of-commits.outputs.toParse }}
+      - uses: wagoid/commitlint-github-action@b948419dd99f3fd78a6548d48f94e3df7f6bf3ed  # v6.2.1
